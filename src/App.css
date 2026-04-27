@@ -1,99 +1,197 @@
-/* Global Styles */
-* {
+/* ═══════════════════════════════════════════════════════════════
+   PORTFOLIO — GLOBAL STYLES
+   Theme: AURORA NEON × DARK MOODY
+   Palette: Violet #7C3AED · Cyan #06B6D4 · Pink #F472B6
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Dark Mode (Default) - CHARCOAL & PUMPKIN */
+/* ── Design Tokens ──────────────────────────────────────────── */
 :root,
 [data-theme="dark"] {
-  --primary-color: #FD802E;
-  --secondary-color: #233D4C;
-  --text-dark: #FD802E;
-  --text-light: #FD802E;
-  --bg-light: #0f1419;
-  --white: #fff;
-  --bg-primary: #0f1419;
-  --bg-secondary: #1a2332;
-  --text-primary: #FD802E;
-  --border-color: #1a2332;
-  
-  /* Extended variables for different components */
-  --card-bg: #1a2332;
-  --card-border: #233D4C;
-  --shadow-color: rgba(15, 20, 25, 0.3);
-  --shadow-hover: rgba(253, 128, 46, 0.2);
-  --input-bg: #0f1419;
-  --input-border: #1a2332;
-  --button-bg: #FD802E;
-  --button-text: #0f1419;
-  --header-bg: rgba(26, 35, 50, 0.95);
-  --footer-bg: #1a2332;
+  /* Aurora Neon Core */
+  --violet: #7C3AED;
+  --violet-light: #a78bfa;
+  --violet-dim: rgba(124, 58, 237, 0.15);
+  --violet-glow: rgba(124, 58, 237, 0.35);
+  --cyan: #06B6D4;
+  --cyan-light: #22d3ee;
+  --cyan-dim: rgba(6, 182, 212, 0.15);
+  --pink: #F472B6;
+  --pink-light: #f9a8d4;
+  --pink-dim: rgba(244, 114, 182, 0.15);
+
+  /* Legacy aliases (keeps old code working) */
+  --pumpkin: #7C3AED;
+  --charcoal: #1e1b4b;
+
+  /* Text */
+  --text-1: #a78bfa;
+  --text-2: rgba(167, 139, 250, 0.75);
+  --text-muted: rgba(167, 139, 250, 0.45);
+
+  /* Surfaces */
+  --bg: #060512;
+  --surface: #0f0a28;
+  --surface-raised: #16103a;
+  --surface-overlay: #1e1b4b;
+
+  /* Borders */
+  --border: rgba(124, 58, 237, 0.2);
+  --border-strong: rgba(124, 58, 237, 0.45);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 8px 40px rgba(124, 58, 237, 0.3);
+  --shadow-glow-lg: 0 16px 64px rgba(124, 58, 237, 0.35);
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --font-body: 'Sora', system-ui, sans-serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+
+  /* Motion */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.3s var(--ease-smooth);
+  --transition-slow: 0.6s var(--ease-smooth);
 }
 
-/* Light Mode - PUMPKIN & CHARCOAL */
 [data-theme="light"] {
-  --primary-color: #FD802E;
-  --secondary-color: #233D4C;
-  --text-dark: #233D4C;
-  --text-light: #233D4C;
-  --bg-light: #f5f5f5;
-  --white: #fff;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f5;
-  --text-primary: #233D4C;
-  --border-color: #e8e8e8;
-  
-  /* Extended variables for different components */
-  --card-bg: #ffffff;
-  --card-border: #e8e8e8;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --shadow-hover: rgba(253, 128, 46, 0.2);
-  --input-bg: #ffffff;
-  --input-border: #e8e8e8;
-  --button-bg: #FD802E;
-  --button-text: #ffffff;
-  --header-bg: rgba(255, 255, 255, 0.95);
-  --footer-bg: #233D4C;
+  --violet: #7C3AED;
+  --violet-light: #6d28d9;
+  --violet-dim: rgba(124, 58, 237, 0.08);
+  --violet-glow: rgba(124, 58, 237, 0.2);
+  --cyan: #0891b2;
+  --cyan-light: #06B6D4;
+  --cyan-dim: rgba(8, 145, 178, 0.08);
+  --pink: #ec4899;
+  --pink-light: #be185d;
+  --pink-dim: rgba(236, 72, 153, 0.08);
+
+  --pumpkin: #7C3AED;
+  --charcoal: #1e1b4b;
+
+  --text-1: #2e1065;
+  --text-2: #4c1d95;
+  --text-muted: #6b21a8;
+
+  --bg: #f5f3ff;
+  --surface: #ffffff;
+  --surface-raised: #faf9ff;
+  --surface-overlay: #ede9fe;
+
+  --border: rgba(124, 58, 237, 0.12);
+  --border-strong: rgba(124, 58, 237, 0.3);
+
+  --shadow-sm: 0 4px 16px rgba(124, 58, 237, 0.07);
+  --shadow-md: 0 8px 32px rgba(124, 58, 237, 0.1);
+  --shadow-lg: 0 20px 60px rgba(124, 58, 237, 0.14);
+  --shadow-glow: 0 8px 40px rgba(124, 58, 237, 0.18);
+  --shadow-glow-lg: 0 16px 64px rgba(124, 58, 237, 0.22);
 }
 
+/* ── Base ───────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-1);
   line-height: 1.6;
-  color: var(--text-dark);
-  background: var(--bg-primary);
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-slow), color var(--transition);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Main App Container */
+/* ── Background atmosphere ──────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 15% -5%, rgba(124, 58, 237, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 70% at 85% 105%, rgba(6, 182, 212, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(244, 114, 182, 0.03) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="light"] body::before {
+  background-image:
+    radial-gradient(ellipse 70% 50% at 15% -5%, rgba(124, 58, 237, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 70% at 85% 105%, rgba(8, 145, 178, 0.04) 0%, transparent 55%);
+}
+
+/* ── Layout ─────────────────────────────────────────────────── */
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 main {
   flex: 1;
 }
 
-/* Globals for smooth transitions */
+/* ── Typography ─────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-1);
+}
+
 a {
-  transition: color 0.3s ease;
+  color: var(--violet-light);
+  text-decoration: none;
+  transition: color var(--transition);
 }
 
-button {
-  transition: all 0.3s ease;
+a:hover {
+  color: var(--cyan-light);
 }
 
-/* Custom scrollbar */
+[data-theme="light"] a {
+  color: var(--violet);
+}
+
+[data-theme="light"] a:hover {
+  color: var(--cyan);
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -101,12 +199,105 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #A8977A 0%, #45362C 100%);
-  border-radius: 10px;
+  background: linear-gradient(180deg, #7C3AED 0%, #06B6D4 50%, #F472B6 100%);
+  border-radius: var(--radius-pill);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #45362C;
+  background: #a78bfa;
 }
 
+/* ── Selection ──────────────────────────────────────────────── */
+::selection {
+  background: rgba(124, 58, 237, 0.4);
+  color: #fff;
+}
 
+/* ── Focus ring ─────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #7C3AED;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Shared Animations ──────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--violet-glow);
+  }
+
+  50% {
+    box-shadow: 0 0 24px 8px var(--violet-glow);
+  }
+}
+
+@keyframes aurora-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ── Utility classes ────────────────────────────────────────── */
+.animate-fade-up {
+  animation: fadeUp 0.6s var(--ease-smooth) both;
+}
+
+.animate-fade-up:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.animate-fade-up:nth-child(2) {
+  animation-delay: 0.10s;
+}
+
+.animate-fade-up:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.animate-fade-up:nth-child(4) {
+  animation-delay: 0.20s;
+}
+
+.animate-fade-up:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+/* ── Aurora gradient text utility ──────────────────────────── */
+.text-aurora {
+  background: linear-gradient(135deg, #a78bfa 0%, #22d3ee 60%, #f9a8d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

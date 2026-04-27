@@ -1,6 +1,6 @@
 export const profileData = {
   name: "Yash Patel",
-  title: "Data Scientist | Machine Learning Engineer | Full Stack Developer (MERN)",
+  title: "Data Analyst | Machine Learning Engineer | Full Stack Developer (MERN)",
   bio: "CSE Undergraduate passionate about building intelligent, data-driven web applications. I bridge the gap between data science and full-stack development — from training ML models to deploying scalable MERN applications.",
   email: "patelyash47597@gmail.com",
   phone: "6263319785",

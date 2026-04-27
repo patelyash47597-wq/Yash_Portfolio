@@ -1,7 +1,4 @@
-// ⚠️ EMAIL SETUP REQUIRED: See EMAIL_SETUP.md in the project root
-// You need to configure EmailJS keys to enable email sending
-import { useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 import { profileData } from '../data/portfolioData';
 import '../styles/Contact.css';
 
@@ -14,12 +11,6 @@ function Contact() {
   });
   const [loading, setLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
-
-  useEffect(() => {
-    // Initialize EmailJS with your public key
-    // Sign up at https://www.emailjs.com/ to get your public key
-    emailjs.init('lA_g9NLkz-rQZhzgg'); // Replace with your public key
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,24 +26,29 @@ function Contact() {
     setStatusMessage('');
 
     try {
-      const templateParams = {
-  name: formData.name,
-  email: formData.email,
-  title: formData.subject,
-  message: formData.message,
-};
+      const formPayload = new FormData();
+      formPayload.append('access_key', 'cc3cf5cf-90f6-4f83-be08-f27da659ee2c'); // 👉 Replace with your key from web3forms.com
+      formPayload.append('name', formData.name);
+      formPayload.append('email', formData.email);
+      formPayload.append('subject', formData.subject);
+      formPayload.append('message', formData.message);
 
-      await emailjs.send(
-        'service_wic6s5r', // Replace with your service ID
-        'template_7ojn2t3', // Replace with your template ID
-        templateParams
-      );
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formPayload,
+      });
 
-      setStatusMessage('✅ Email sent successfully! I will get back to you soon.');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      const data = await response.json();
+
+      if (data.success) {
+        setStatusMessage('✅ Message sent successfully! I will get back to you soon.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatusMessage('❌ ' + (data.message || 'Failed to send. Please try again.'));
+      }
     } catch (error) {
-      console.error('Failed to send email:', error);
-      setStatusMessage('❌ Failed to send email. Please try again or email me directly.');
+      console.error('Web3Forms error:', error);
+      setStatusMessage('❌ Failed to send message. Please try again or email me directly.');
     } finally {
       setLoading(false);
     }
@@ -111,7 +107,7 @@ function Contact() {
             <div className="recipient-info">
               <p>✉️ Your message will be sent directly to: <strong>{profileData.email}</strong></p>
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -167,6 +163,7 @@ function Contact() {
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? 'Sending...' : 'Send Message'}
             </button>
+
             {statusMessage && (
               <div className={`status-message ${statusMessage.includes('✅') ? 'success' : 'error'}`}>
                 {statusMessage}
