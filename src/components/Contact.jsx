@@ -43,8 +43,8 @@ function Contact() {
 };
 
       await emailjs.send(
-        'service_p3jyyes', // Replace with your service ID
-        'template_7gmqgao', // Replace with your template ID
+        'service_wic6s5r', // Replace with your service ID
+        'template_7ojn2t3', // Replace with your template ID
         templateParams
       );
 

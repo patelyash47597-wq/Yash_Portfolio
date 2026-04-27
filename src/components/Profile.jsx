@@ -8,7 +8,7 @@ function Profile() {
             <div className="profile-container">
                 <div className="profile-header">
                     <div className="profile-avatar">
-                        <img src="/Profilepic.jpeg" alt={profileData.name} className="avatar-image" />
+                        <img src="/projects/Profilepic.jpeg" alt={profileData.name} className="avatar-image" />
                     </div>
                    
                     <h1 className="profile-name">{profileData.name}</h1>
