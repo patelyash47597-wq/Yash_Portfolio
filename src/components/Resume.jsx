@@ -1,14 +1,12 @@
+import { useState } from 'react';
 import { resumeData, profileData, technicalSkills } from '../data/portfolioData';
 import '../styles/Resume.css';
 
 function Resume() {
+  const [showPdf, setShowPdf] = useState(false);
+
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/Yash_resume.pdf';
-    link.download = 'Yash_resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    setShowPdf(prev => !prev);
   };
 
   const handleShareResume = () => {
@@ -38,12 +36,25 @@ function Resume() {
 
         <div className="resume-actions">
           <button className="resume-btn download-btn" onClick={handleDownloadResume}>
-            📥 Open Resume
+            {showPdf ? '🙈 Hide Resume' : '📄 View Resume'}
           </button>
           <button className="resume-btn share-btn" onClick={handleShareResume}>
             📤 Share Resume
           </button>
         </div>
+
+        {/* PDF Viewer */}
+        {showPdf && (
+          <div className="pdf-viewer">
+            <iframe
+              src="/Yash_resume.pdf"
+              title="Yash Resume"
+              width="100%"
+              height="700px"
+              style={{ border: 'none', borderRadius: '12px' }}
+            />
+          </div>
+        )}
 
         <div className="resume-content">
           {/* Experience Section */}
