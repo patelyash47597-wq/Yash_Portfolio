@@ -4,8 +4,22 @@ import '../styles/Projects.css';
 function Projects() {
   const renderProjectCard = (project) => (
     <div key={project.id} className="project-card">
+
+      {/* THUMBNAIL - title ke upar */}
+      <div className="project-thumbnail">
+        {project.image && project.image.startsWith('/') ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="project-thumbnail-img"
+          />
+        ) : (
+          <div className="project-thumbnail-emoji">{project.image}</div>
+        )}
+      </div>
+
+      {/* Duration badge */}
       <div className="project-header">
-        <div className="project-icon">{project.image}</div>
         <div className="project-duration">{project.duration}</div>
       </div>
       <h2 className="project-title">{project.title}</h2>
@@ -42,7 +56,6 @@ function Projects() {
         <h1>My Projects</h1>
         <p className="projects-subtitle">Here are some of my recent works and projects</p>
 
-        {/* Main Projects Section */}
         <div className="projects-section">
           <h2 className="section-heading">📌 Main Projects</h2>
           <div className="projects-grid">
@@ -50,7 +63,6 @@ function Projects() {
           </div>
         </div>
 
-        {/* Mini Projects Section */}
         <div className="mini-projects-section">
           <h2 className="section-heading">🎯 Mini Projects</h2>
           <div className="projects-grid">

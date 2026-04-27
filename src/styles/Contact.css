@@ -1,5 +1,5 @@
 .contact {
-  background: #161711;
+  background: #0f1419;
   padding: 4rem 2rem;
   min-height: 100vh;
 }
@@ -12,10 +12,10 @@
 /* Theme Variables */
 :root,
 [data-theme="dark"] {
-  --bg-contact: #161711;
-  --card-contact: #45362C;
-  --text-contact: #A8977A;
-  --accent-contact: #A8977A;
+  --bg-contact: #0f1419;
+  --card-contact: #233D4C;
+  --text-contact: #FD802E;
+  --accent-contact: #FD802E;
 }
 
 [data-theme="light"] {
@@ -27,14 +27,14 @@
 
 .contact-container h1 {
   font-size: 2.5rem;
-  color: #A8977A;
+  color: #FD802E;
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
 .contact-subtitle {
   text-align: center;
-  color: #A8977A;
+  color: #FD802E;
   margin-bottom: 3rem;
   font-size: 1.1rem;
 }
@@ -46,15 +46,15 @@
 }
 
 .contact-info {
-  background: #45362C;
+  background: #233D4C;
   padding: 2.5rem;
   border-radius: 35px;
-  border-left: 5px solid #A8977A;
+  border-left: 5px solid #FD802E;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h2 {
-  color: #A8977A;
+  color: #FD802E;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
@@ -77,25 +77,25 @@
 }
 
 .contact-item h3 {
-  color: #A8977A;
+  color: #FD802E;
   margin-bottom: 0.3rem;
 }
 
 .contact-item p,
 .contact-item a {
-  color: #A8977A;
+  color: #FD802E;
   text-decoration: none;
   line-height: 1.6;
 }
 
 .contact-item a {
-  color: #A8977A;
+  color: #FD802E;
   font-weight: 600;
 }
 
 .contact-item a:hover {
   text-decoration: underline;
-  color: #45362C;
+  color: #233D4C;
 }
 
 .social-links {
@@ -107,11 +107,11 @@
 .social-links a {
   display:inline-block;
   padding: 0.5rem 1rem;
-  background: #A8977A;
-  color: #161711;
+  background: #FD802E;
+  color: #0f1419;
   text-decoration: none;
   border-radius: 35px;
-  border-left: 3px solid #A8977A;
+  border-left: 3px solid #FD802E;
   transition: transform 0.3s;
   width: fit-content;
 }
@@ -121,10 +121,10 @@
 }
 
 .contact-form {
-  background: #45362C;
+  background: #233D4C;
   padding: 2.5rem;
   border-radius: 35px;
-  border-left: 5px solid #A8977A;
+  border-left: 5px solid #FD802E;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -132,7 +132,7 @@
 }
 
 .contact-form h2 {
-  color: #A8977A;
+  color: #FD802E;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
 }
@@ -141,18 +141,18 @@
   background: rgba(168, 151, 122, 0.1);
   padding: 1rem;
   border-radius: 35px;
-  border-left: 4px solid #A8977A;
+  border-left: 4px solid #FD802E;
   margin-bottom: 1rem;
 }
 
 .recipient-info p {
   margin: 0;
-  color: #A8977A;
+  color: #FD802E;
   font-weight: 500;
 }
 
 .recipient-info strong {
-  color: #A8977A;
+  color: #FD802E;
   word-break: break-all;
 }
 
@@ -163,36 +163,36 @@
 }
 
 .form-group label {
-  color: #A8977A;
+  color: #FD802E;
   font-weight: 600;
 }
 
 .form-group input,
 .form-group textarea {
   padding: 0.8rem;
-  border: 2px solid #45362C;
+  border: 2px solid #233D4C;
   border-radius: 35px;
-  border-left: 3px solid #A8977A;
+  border-left: 3px solid #FD802E;
   font-family: inherit;
   font-size: 1rem;
   transition: border-color 0.3s;
-  background: #161711;
-  color: #A8977A;
+  background: #0f1419;
+  color: #FD802E;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #A8977A;
+  border-color: #FD802E;
 }
 
 .submit-btn {
   padding: 0.8rem 1.5rem;
-  background: #A8977A;
-  color: #161711;
+  background: #FD802E;
+  color: #0f1419;
   border: none;
   border-radius: 35px;
-  border-left: 3px solid #A8977A;
+  border-left: 3px solid #FD802E;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
@@ -215,7 +215,7 @@
   margin-top: 1rem;
   padding: 1rem;
   border-radius: 35px;
-  border-left: 3px solid #A8977A;
+  border-left: 3px solid #FD802E;
   font-weight: 500;
   animation: slideIn 0.3s ease-in-out;
 }

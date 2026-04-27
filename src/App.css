@@ -5,57 +5,57 @@
   box-sizing: border-box;
 }
 
-/* Dark Mode (Default) */
+/* Dark Mode (Default) - CHARCOAL & PUMPKIN */
 :root,
 [data-theme="dark"] {
-  --primary-color: #A8977A;
-  --secondary-color: #45362C;
-  --text-dark: #A8977A;
-  --text-light: #A8977A;
-  --bg-light: #161711;
+  --primary-color: #FD802E;
+  --secondary-color: #233D4C;
+  --text-dark: #FD802E;
+  --text-light: #FD802E;
+  --bg-light: #0f1419;
   --white: #fff;
-  --bg-primary: #161711;
-  --bg-secondary: #45362C;
-  --text-primary: #A8977A;
-  --border-color: #45362C;
+  --bg-primary: #0f1419;
+  --bg-secondary: #1a2332;
+  --text-primary: #FD802E;
+  --border-color: #1a2332;
   
   /* Extended variables for different components */
-  --card-bg: #45362C;
-  --card-border: #5a483a;
-  --shadow-color: rgba(22, 23, 17, 0.3);
-  --shadow-hover: rgba(168, 151, 122, 0.2);
-  --input-bg: #161711;
-  --input-border: #45362C;
-  --button-bg: #A8977A;
-  --button-text: #161711;
-  --header-bg: rgba(69, 54, 44, 0.95);
-  --footer-bg: #45362C;
+  --card-bg: #1a2332;
+  --card-border: #233D4C;
+  --shadow-color: rgba(15, 20, 25, 0.3);
+  --shadow-hover: rgba(253, 128, 46, 0.2);
+  --input-bg: #0f1419;
+  --input-border: #1a2332;
+  --button-bg: #FD802E;
+  --button-text: #0f1419;
+  --header-bg: rgba(26, 35, 50, 0.95);
+  --footer-bg: #1a2332;
 }
 
-/* Light Mode */
+/* Light Mode - PUMPKIN & CHARCOAL */
 [data-theme="light"] {
-  --primary-color: #667eea;
-  --secondary-color: #764ba2;
-  --text-dark: #333;
-  --text-light: #666;
-  --bg-light: #f8f9fa;
+  --primary-color: #FD802E;
+  --secondary-color: #233D4C;
+  --text-dark: #233D4C;
+  --text-light: #233D4C;
+  --bg-light: #f5f5f5;
   --white: #fff;
   --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text-primary: #333;
-  --border-color: #e9ecef;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #233D4C;
+  --border-color: #e8e8e8;
   
   /* Extended variables for different components */
   --card-bg: #ffffff;
-  --card-border: #e9ecef;
+  --card-border: #e8e8e8;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --shadow-hover: rgba(102, 126, 234, 0.2);
+  --shadow-hover: rgba(253, 128, 46, 0.2);
   --input-bg: #ffffff;
-  --input-border: #e9ecef;
-  --button-bg: #667eea;
+  --input-border: #e8e8e8;
+  --button-bg: #FD802E;
   --button-text: #ffffff;
   --header-bg: rgba(255, 255, 255, 0.95);
-  --footer-bg: #667eea;
+  --footer-bg: #233D4C;
 }
 
 html {

@@ -1,6 +1,6 @@
 .footer {
-  background: #45362C;
-  color: #A8977A;
+  background: #233D4C;
+  color: #FD802E;
   padding: 3rem 2rem 1rem;
   margin-top: 2rem;
 }
@@ -42,7 +42,7 @@
 }
 
 .footer-links a:hover {
-  color: #A8977A;
+  color: #FD802E;
   text-decoration: underline;
 }
 

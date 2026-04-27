@@ -1,134 +1,146 @@
 export const profileData = {
-  name: "Lakshya Ghanghoriya",
-  title: "Full Stack Developer , Java , Ui/Ux designer",
-  bio: "Passionate about building amazing web applications and sharing knowledge with the community.",
-  email: "23cs10la77@mitsgwl.ac.in",
-  phone: "+917000058446",
-  location: "Gwalior , India",
+  name: "Yash Patel",
+  title: "Data Scientist | Machine Learning Engineer | Full Stack Developer (MERN)",
+  bio: "CSE Undergraduate passionate about building intelligent, data-driven web applications. I bridge the gap between data science and full-stack development — from training ML models to deploying scalable MERN applications.",
+  email: "patelyash47597@gmail.com",
+  phone: "6263319785",
+  location: "Indore, India",
   social: {
-    github: "https://github.com/Lakshya-2004",
-    linkedin: "https://linkedin.com/in/lakshya-ghanghoriya-5264223a3/",
-     leetcode: "https://leetcode.com/u/kumarirajm446/",
+    github: "https://github.com/patelyash47597-wq",
+    linkedin: "https://www.linkedin.com/in/yash-patel-3172172b2/",
+    leetcode: "https://leetcode.com/u/P5NpFJBMoJ/",
+    hackerrank: "https://www.hackerrank.com/profile/patelyash47597",
   },
-  skills: ["React", "Java", "JavaScript", "Node.js", "MongoDB", "Express", "HTML/CSS", "Git", "Vite", "SQL", "UI/UX Designer"],
-  tools: ["Netlify", "Figma", "VS Code", "Git", "GitHub", "IntelliJ IDEA", "Canva", "PyCharm", "MySQL", "MongoDB Shell", "MongoDB Database Tools", "Vercel"],
-  about: "Third year CSE student at Madhav Institute of Technology and Science, Gwalior (CGPA: 8.4) with hands-on full stack development experience using React, Node.js, Express.js, MongoDB, Java, and UI/UX design. Contributed to projects as a UI/UX Designer and Frontend Developer, building responsive interfaces and solving complex problems. Completed 250+ LeetCode and 40+ HackerRank coding problems. Active member of the GFG Society and eager to apply technical skills in a real-world internship.",
+  skills: [
+    "Python", "JavaScript", "SQL", "C", "C++",
+    "Machine Learning", "NLP", "Data Analysis",
+    "React", "MERN Stack", "FastAPI",
+    "Power BI", "MySQL", "TensorFlow", "Scikit-learn"
+  ],
+  tools: ["Power BI", "MySQL", "Figma", "VS Code", "PyCharm", "IntelliJ", "Canva"],
+  about:
+    "I'm a Computer Science undergraduate at Madhav Institute of Technology and Science, Gwalior (CGPA: 8.4), with a strong foundation in both data analytics and full-stack web development. I enjoy building end-to-end solutions — from cleaning raw datasets and crafting Power BI dashboards to developing AI-powered MERN applications with real-time features. My projects reflect my interest in solving real-world problems using machine learning, NLP, and modern web technologies.",
 };
 
 export const technicalSkills = {
-  languages: ["Java", "Python", "C", "C++", "JavaScript", "SQL", "HTML"],
-  frameworks: ["MERN Stack", "React", "Tailwind CSS", "Bootstrap", "Matplotlib", "NumPy", "Mongoose"],
-  databases: ["MySQL", "MongoDB"],
-  tools: ["Netlify", "Figma", "VS Code", "Git", "GitHub", "IntelliJ IDEA", "Canva", "PyCharm", "MySQL", "MongoDB Shell", "MongoDB Database Tools", "Vercel"],
+  languages: ["Python", "JavaScript", "SQL", "C", "C++"],
+  frameworks: [
+    "React", "Node.js", "Express", "FastAPI",
+    "HTML5", "CSS3", "Tailwind CSS", "Bootstrap",
+    "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "TensorFlow"
+  ],
+  databases: ["MongoDB", "MySQL"],
+  tools: ["Power BI", "Figma", "VS Code", "PyCharm", "IntelliJ IDEA", "Canva", "Advanced Excel"],
 };
 
 export const projectsData = [
   {
     id: 1,
-    title: "Beacon: Mental Health Platform",
-    description: "Build UI components and integrated Firebase authentication & real-time Database. Implemented Chatbot functionality for smooth user interaction",
-    technologies: ["React", "Firebase", "TypeScript", "MongoDB"],
-    role: "UI/UX design, Frontend Developer",
-    duration: "OCT-DEC 2025",
-    repoUrl: "https://github.com/Shiva-005/The-Beacons-A-Clear-Path-in-Uncertain-times.git",
-    image: "🧠",
+    image: "/projects/Complaintsetu.png",
+    title: "Complaint Setu",
+    description:
+      "A full-stack citizen grievance portal with JWT-secured REST APIs, role-based admin access, and complaint lifecycle management for Water, Electricity, Roads, and Sanitation. Features multi-modal ML priority prediction (Naive Bayes + TensorFlow EfficientNet), real-time duplicate detection via cosine similarity, SLA enforcement, and an admin analytics dashboard.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Python", "FastAPI", "Scikit-learn", "TensorFlow", "Chart.js", "Nodemailer"],
+    role: "Full Stack Developer & ML Engineer",
+    duration: "2025",
+    repoUrl: "https://github.com/patelyash47597-wq/Complaint_setu",
+    
   },
   {
     id: 2,
-    title: "Job-Finder: Job Searching Platform",
-    description: "Developed job Listing pages, search filter, and responsive components. Integrated Firebase for job posting and user interactions.",
-    technologies: ["React", "TypeScript", "Firebase"],
-    role: "UI/UX design, Frontend Developer",
-    duration: "OCT-DEC 2025",
-    repoUrl: "https://github.com/rashi125/job.git",
-    image: "💼",
+    image : "/projects/Job.png",
+    title: "AI-Powered Career Development Platform",
+    description:
+      "A career guidance platform with live job search, real-time listings, and REST API integration. Includes node-based learning roadmaps with YouTube IFrame API, a 20-question quiz engine with PDF certificate generation (jsPDF), analytics dashboard with Recharts, an AI chatbot for personalized career guidance, and Firebase authentication with multi-roadmap progress persistence.",
+    technologies: ["React", "TypeScript", "Firebase", "Recharts", "jsPDF", "YouTube IFrame API"],
+    role: "Full Stack Developer",
+    duration: "2025",
+    repoUrl: "https://github.com/patelyash47597-wq/serach_job",
+    
   },
   {
     id: 3,
-    title: "Read-eZ: URL-Shortener Platform",
-    description: "Developed Platform to shorten long URLs in readable length using REST API. Storing Data in JSON file.",
-    technologies: ["React", "JavaScript", "Node.js", "REST API"],
-    role: "UI/UX design, Frontend Developer, Backend Developer",
-    duration: "FEB 2026",
-    repoUrl: "https://github.com/Lakshya-2004/URL_shortener.git",
-    image: "🔗",
+    image: "/projects/Mental.png",
+    title: "Mental Health Platform",
+    description:
+      "An AI-powered mental health platform with a context-aware chatbot, quiz-based psychological assessment engine (Mild / Moderate / Severe classification), and a tiered support system — music therapy and yoga for mild cases, peer-to-peer connections for moderate, and direct counsellor referral for severe. Built with modular React/TypeScript components and Firebase real-time database.",
+    technologies: ["React", "TypeScript", "Firebase"],
+    role: "Full Stack Developer",
+    duration: "2025",
+    repoUrl: "https://github.com/patelyash47597-wq/Yash_Mental",
   },
   {
     id: 4,
-    title: "Lakshya: Portfolio",
-    description: "Developed Platform for Introduction of mine and to mine Skills in technical field",
-    technologies: ["React", "JavaScript",],
-    role: "UI/UX design, Frontend Developer, Backend Developer",
-    duration: "Mar 2026",
-    repoUrl: "https://github.com/Lakshya-2004/PortFolio-Lakshya_Ghanghoriya.git",
-    image: "🏢",
+    
+    title: "Truth Lens – Fake News Detector",
+    description:
+      "A fake news detection system with a Naive Bayes classifier trained on 10,000 balanced articles using TF-IDF vectorization. Features an interactive React dashboard with real-time prediction results, confidence scores, live accuracy tracking, a classification donut chart, and a FastAPI /predict endpoint.",
+    technologies: ["React", "Python", "Scikit-learn", "Naive Bayes", "TF-IDF", "FastAPI"],
+    role: "ML Engineer & Frontend Developer",
+    duration: "2026",
+    repoUrl: "https://github.com/patelyash47597-wq/Fake-news-Detection",
+    image: "📰",
+    
   },
 ];
 
 export const miniProjectsData = [
   {
     id: 1,
-    title: "Todo List",
-    description: "A simple and intuitive todo list application to manage daily tasks efficiently with a clean UI.",
-    technologies: ["React", "JavaScript", "UI/UX design"],
-    role: "Complete React, UI/UX Developer",
-    duration: "JAN 2026",
-    repoUrl: "https://github.com/Lakshya-2004/Todo-List.git",
-    image: "✓",
-  },
-  {
-    id: 2,
-    title: "Card-Search: Pokemon Go",
-    description: "A card search application to find and explore Pokemon cards with a responsive design and smooth interactions.",
-    technologies: ["React", "JavaScript", "UI/UX design"],
-    role: "Complete React, UI/UX Developer",
-    duration: "JAN 2026",
-    repoUrl: "https://github.com/Lakshya-2004/Pokemon-Go.git",
-    image: "🃏",
+    image: "/projects/Mobile_Data.png",
+    title: "Mobile Sales Data Analytics Dashboard",
+    description:
+      "End-to-end data analytics project: data cleaning with Pandas and NumPy, sales trend and regional analysis in MySQL, and an interactive Power BI dashboard visualizing revenue KPIs, top products, and monthly trends.",
+    technologies: ["Python", "Pandas", "NumPy", "MySQL", "Power BI"],
+    role: "Data Analyst",
+    duration: "2026",
+    repoUrl: "https://drive.google.com/file/d/1hbOnrkZ9dMi0BgygqgbrXjjXJ2r9BmVk/view?usp=sharing",
+    image: "📊",
   },
 ];
 
 export const resumeData = {
-  experience: [
-    {
-      company: "Real Time Problem Projects",
-      position: "Project Developer",
-      duration: "Oct 2025 - Dec 2025",
-      description: "Worked on impactful real-world projects:",
-      details: [
-        "Beacon - Mental Health Platform",
-        "Job-Finder - Job Seeking Platform"
-      ]
-    },
-    {
-      company: "Campus Organizations",
-      position: "Society Member & Contributor",
-      duration: "2024 - Present",
-      description: "Actively involved in:",
-      details: [
-        "GFG's Campus",
-        "Aerospace Club"
-      ]
-    },
-  ],
+  experience: [],
   education: [
     {
-      school: "Madhav Institute of Technology and Science",
-      degree: "B-Tech - Computer Science and Engineering",
-      year: "2023-2027",
-      gpa: "CGPA: 8.4",
+      school: "Madhav Institute of Technology and Science, Gwalior",
+      degree: "B.Tech – Computer Science and Engineering",
+      year: "2023 – 2026",
+      gpa: "8.4",
     },
     {
-      school: "Sliver Bells H.S School",
-      degree: "High-School",
-      year: "2021-2022",
+      school: "Govt. Model Higher Secondary School, Mhow (Indore)",
+      degree: "Class XII – PCM",
+      year: "2021 – 2022",
+      gpa: "84.5%",
+    },
+    {
+      school: "Govt. Model Higher Secondary School, Mhow (Indore)",
+      degree: "Class X",
+      year: "2019 – 2020",
+      gpa: "97.3%",
     },
   ],
   certifications: [
     {
-      name: "Full-Stack-Development + Java(DSA)",
-      duration: "Dec 2024 - Jan 2026",
-      fileUrl: "/Fsd.pdf",
+      name: "Frontend Developer – Infosys Springboard",
+      duration: "",
+      fileUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:f221af13-c307-4d4c-8056-54e3488e6651",
+    },
+    {
+      name: "Data Virtualization – Infosys",
+      duration: "",
+      fileUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:45adb534-c17f-4e07-84d3-b48db9a1a533",
+    },
+    {
+      name: "Python for Data Science – IBM",
+      duration: "",
+      fileUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:0157d6d6-68c4-4a8f-9c4c-45098ef15798",
+    },
+    {
+      name: "HTML, CSS, JavaScript – Infosys",
+      duration: "",
+      fileUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:f71ebf90-2745-4f0d-9ace-d48698458d5c",
     },
   ],
 };

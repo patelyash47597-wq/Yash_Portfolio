@@ -5,27 +5,27 @@
   box-sizing: border-box;
 }
 
-/* Dark Mode (Default) */
+/* Dark Mode (Default) - CHARCOAL & PUMPKIN */
 :root,
 [data-theme="dark"] {
-  --primary-color: #A8977A;
-  --secondary-color: #45362C;
-  --text-dark: #A8977A;
-  --text-light: #A8977A;
-  --bg-light: #161711;
+  --primary-color: #FD802E;
+  --secondary-color: #233D4C;
+  --text-dark: #FD802E;
+  --text-light: #FD802E;
+  --bg-light: #0f1419;
   --white: #fff;
-  --border-color: #45362C;
+  --border-color: #1a2332;
 }
 
-/* Light Mode */
+/* Light Mode - PUMPKIN & CHARCOAL */
 [data-theme="light"] {
-  --primary-color: #667eea;
-  --secondary-color: #764ba2;
-  --text-dark: #333;
-  --text-light: #666;
-  --bg-light: #f8f9fa;
+  --primary-color: #FD802E;
+  --secondary-color: #233D4C;
+  --text-dark: #233D4C;
+  --text-light: #233D4C;
+  --bg-light: #f5f5f5;
   --white: #fff;
-  --border-color: #e9ecef;
+  --border-color: #e8e8e8;
 }
 
 html {

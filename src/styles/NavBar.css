@@ -4,31 +4,31 @@
   box-sizing: border-box;
 }
 
-/* Dark Mode (Default) */
+/* Dark Mode (Default) - CHARCOAL & PUMPKIN */
 :root,
 [data-theme="dark"] {
-  --navbar-bg: rgba(69, 54, 44, 0.95);
-  --nav-link-color: #A8977A;
-  --nav-link-hover: #45362C;
-  --nav-active-bg: #A8977A;
-  --nav-active-color: #161711;
-  --nav-logo-color: #A8977A;
+  --navbar-bg: rgba(26, 35, 50, 0.95);
+  --nav-link-color: #FD802E;
+  --nav-link-hover: #FD802E;
+  --nav-active-bg: #FD802E;
+  --nav-active-color: #0f1419;
+  --nav-logo-color: #FD802E;
 }
 
-/* Light Mode */
+/* Light Mode - PUMPKIN & CHARCOAL */
 [data-theme="light"] {
   --navbar-bg: rgba(255, 255, 255, 0.95);
-  --nav-link-color: #555;
-  --nav-link-hover: #667eea;
-  --nav-active-bg: #667eea;
-  --nav-active-color: #fff;
-  --nav-logo-color: #667eea;
+  --nav-link-color: #233D4C;
+  --nav-link-hover: #FD802E;
+  --nav-active-bg: #FD802E;
+  --nav-active-color: #ffffff;
+  --nav-logo-color: #233D4C;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--bg-light, #161711);
-  color: var(--text-dark, #A8977A);
+  background: var(--bg-light, #0f1419);
+  color: var(--text-dark, #FD802E);
   line-height: 1.6;
 }
 
@@ -77,7 +77,7 @@ html {
 }
 
 .nav-logo:hover {
-  color: #45362C;
+  color: #233D4C;
 }
 
 .nav-menu {
@@ -124,7 +124,7 @@ html {
 
 .theme-toggle-btn {
   padding: 0.7rem 1.4rem;
-  background: linear-gradient(135deg, var(--nav-active-bg) 0%, var(--secondary-color, #8d7a63) 100%);
+  background: linear-gradient(135deg, var(--nav-active-bg) 0%, var(--secondary-color, #e67024) 100%);
   color: var(--nav-active-color);
   border: 2px solid var(--nav-active-bg);
   border-radius: 50px;
@@ -141,7 +141,7 @@ html {
   letter-spacing: 0.5px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(168, 151, 122, 0.25);
+  box-shadow: 0 4px 15px rgba(253, 128, 46, 0.25);
 }
 
 .theme-toggle-btn::before {
@@ -165,8 +165,8 @@ html {
 
 .theme-toggle-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(168, 151, 122, 0.45);
-  background: linear-gradient(135deg, var(--secondary-color, #8d7a63) 0%, var(--nav-active-bg) 100%);
+  box-shadow: 0 8px 25px rgba(253, 128, 46, 0.45);
+  background: linear-gradient(135deg, var(--secondary-color, #e67024) 0%, var(--nav-active-bg) 100%);
 }
 
 .theme-toggle-btn:active {
@@ -207,10 +207,10 @@ html {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 4px 15px rgba(168, 151, 122, 0.25);
+    box-shadow: 0 4px 15px rgba(253, 128, 46, 0.25);
   }
   50% {
-    box-shadow: 0 6px 20px rgba(168, 151, 122, 0.4);
+    box-shadow: 0 6px 20px rgba(253, 128, 46, 0.4);
   }
 }
 
@@ -220,7 +220,7 @@ html {
 
 [data-theme="light"] .theme-toggle-btn {
   animation: 3s glow ease-in-out infinite;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 4px 15px rgba(253, 128, 46, 0.25);
 }
 
 /* Light Mode Overrides */

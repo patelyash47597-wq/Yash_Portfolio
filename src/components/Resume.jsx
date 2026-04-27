@@ -3,8 +3,12 @@ import '../styles/Resume.css';
 
 function Resume() {
   const handleDownloadResume = () => {
-    const resumeUrl = '/Lakshya_Ghanghoriya_Resume.pdf';
-    window.open(resumeUrl, '_blank');
+    const link = document.createElement('a');
+    link.href = '/Yash_resume.pdf';
+    link.download = 'Yash_resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleShareResume = () => {
@@ -46,23 +50,27 @@ function Resume() {
           <div className="resume-section">
             <h2 className="section-title">💼 Experience</h2>
             <div className="experience-list">
-              {resumeData.experience.map((job, index) => (
-                <div key={index} className="experience-item">
-                  <div className="experience-header">
-                    <h3>{job.position}</h3>
-                    <span className="duration">{job.duration}</span>
+              {resumeData.experience.length === 0 ? (
+                <p style={{ color: 'var(--color-text-secondary)' }}>No experience added yet.</p>
+              ) : (
+                resumeData.experience.map((job, index) => (
+                  <div key={index} className="experience-item">
+                    <div className="experience-header">
+                      <h3>{job.position}</h3>
+                      <span className="duration">{job.duration}</span>
+                    </div>
+                    <p className="company">{job.company}</p>
+                    <p className="description">{job.description}</p>
+                    {job.details && (
+                      <ul className="details-list">
+                        {job.details.map((detail, idx) => (
+                          <li key={idx}>{detail}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
-                  <p className="company">{job.company}</p>
-                  <p className="description">{job.description}</p>
-                  {job.details && (
-                    <ul className="details-list">
-                      {job.details.map((detail, idx) => (
-                        <li key={idx}>{detail}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+                ))
+              )}
             </div>
           </div>
 
@@ -108,15 +116,13 @@ function Resume() {
           {/* Skills Section */}
           <div className="resume-section">
             <h2 className="section-title">🛠️ Technical Skills</h2>
-            
+
             <div className="technical-skills">
               <div className="skill-category">
                 <h3 className="category-title">Languages</h3>
                 <div className="skills-grid">
                   {technicalSkills.languages.map((skill, index) => (
-                    <span key={index} className="skill-badge">
-                      {skill}
-                    </span>
+                    <span key={index} className="skill-badge">{skill}</span>
                   ))}
                 </div>
               </div>
@@ -125,9 +131,7 @@ function Resume() {
                 <h3 className="category-title">Framework / Libraries</h3>
                 <div className="skills-grid">
                   {technicalSkills.frameworks.map((skill, index) => (
-                    <span key={index} className="skill-badge">
-                      {skill}
-                    </span>
+                    <span key={index} className="skill-badge">{skill}</span>
                   ))}
                 </div>
               </div>
@@ -136,9 +140,7 @@ function Resume() {
                 <h3 className="category-title">Databases</h3>
                 <div className="skills-grid">
                   {technicalSkills.databases.map((skill, index) => (
-                    <span key={index} className="skill-badge">
-                      {skill}
-                    </span>
+                    <span key={index} className="skill-badge">{skill}</span>
                   ))}
                 </div>
               </div>
@@ -147,9 +149,7 @@ function Resume() {
                 <h3 className="category-title">Tools</h3>
                 <div className="skills-grid">
                   {technicalSkills.tools.map((skill, index) => (
-                    <span key={index} className="skill-badge">
-                      {skill}
-                    </span>
+                    <span key={index} className="skill-badge">{skill}</span>
                   ))}
                 </div>
               </div>

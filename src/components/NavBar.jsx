@@ -9,7 +9,7 @@ function NavBar() {
     <nav className="navbar">
       <div className="nav-container">
         <NavLink to="/" className="nav-logo">
-          Lakshya 💼
+          Yash 💼
         </NavLink>
 
         <ul className="nav-menu">

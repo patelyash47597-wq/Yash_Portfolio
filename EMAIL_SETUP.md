@@ -49,11 +49,11 @@ await emailjs.send(
 
 ## Example Values:
 ```javascript
-emailjs.init('3a1b2c4d5e6f7g8h9i0j1k2l'); // Your public key
+emailjs.init('your-public-key'); // Your public key
 
 await emailjs.send(
-  'service_abc123def456',  // Your service ID
-  'template_xyz789uvw012', // Your template ID
+  'service-id',  // Your service ID
+  'template-id', // Your template ID
   templateParams
 );
 ```
